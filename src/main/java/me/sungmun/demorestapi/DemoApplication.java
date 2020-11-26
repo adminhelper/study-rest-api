@@ -1,4 +1,4 @@
-package me.sungmn.demorestapi;
+package me.sungmun.demorestapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

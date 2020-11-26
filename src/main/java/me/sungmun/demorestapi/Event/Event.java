@@ -1,13 +1,18 @@
-package me.sungmn.demorestapi.events;
+package me.sungmun.demorestapi.Event;
 
 import lombok.*;
 
-import javax.persistence.Entity;
 import java.time.LocalDateTime;
 
-@Builder @AllArgsConstructor @NoArgsConstructor
-@Getter @Setter @EqualsAndHashCode(of = "id")
+
+@Getter
+@Setter
+@EqualsAndHashCode(of = "id")
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Event {
+
     private Integer id;
     private String name;
     private String description;

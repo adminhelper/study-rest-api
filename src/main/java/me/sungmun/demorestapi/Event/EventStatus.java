@@ -1,4 +1,4 @@
-package me.sungmn.demorestapi.events;
+package me.sungmun.demorestapi.Event;
 
 public enum EventStatus {
 
