@@ -1,18 +1,20 @@
 package me.sungmun.demorestapi.Event;
 
 import lombok.*;
+import org.hibernate.annotations.Entity;
 
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Id;
 import java.time.LocalDateTime;
 
 
-@Getter
-@Setter
-@EqualsAndHashCode(of = "id")
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
+@Getter @Setter @EqualsAndHashCode(of = "id")
+@Builder @NoArgsConstructor @AllArgsConstructor
+@Entity
 public class Event {
 
+    @Id @Generated
     private Integer id;
     private String name;
     private String description;
@@ -26,6 +28,7 @@ public class Event {
     private int limitOfEnrollment;
     private boolean offline;
     private boolean free;
-    private EventStatus eventStatus = EventStatus.DRAFT;
+    @Enumerated(EnumType.STRING)
+    private EventStatus eventStatus;
 
 }
